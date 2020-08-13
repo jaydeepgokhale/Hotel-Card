@@ -1,0 +1,116 @@
+$star-size: 10px;
+$star-color: #fff;
+$star-background: #fc0;
+
+body {
+  font-family: "Roboto" !important;
+}
+
+.hotel-card {
+  max-width: 400px;
+}
+
+.cardContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image{
+  height: 300px;
+}
+
+.subtitle {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+mat-card-title{
+  text-align: center;
+  font-size: 22px;
+}
+
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  margin-top: 10px;
+  float: left;
+  width: 70%;
+}
+
+.right {
+  text-align: right;
+}
+
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+.bar-5 {
+  height: 18px;
+  background-color: #4caf50;
+}
+.bar-4 {
+  height: 18px;
+  background-color: #4caf50;
+}
+.bar-3 {
+  height: 18px;
+  background-color: #ff9800;
+}
+.bar-2 {
+  height: 18px;
+  background-color: #f44336;
+}
+.bar-1 {
+  height: 18px;
+  background-color: #f44336;
+}
+
+.stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: 20px;
+  font-family: Times;
+  line-height: 0.9;
+  margin-left: 5px;
+
+  &::before {
+    content: "★★★★★";
+    letter-spacing: 0px;
+    background: linear-gradient(
+      90deg,
+      $star-background var(--percent),
+      $star-color var(--percent)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.featureDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.features {
+  font-size: 14px;
+}
+
+.featureContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  justify-content: center;
+}
